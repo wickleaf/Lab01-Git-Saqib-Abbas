@@ -1,10 +1,8 @@
 .text
 .globl main
 main:
-    li x20, 3        # g = 3
-    li x21, 1        # h = 1
-    li x22, 2        # i = 2
-    li x23, 1        # j = 1
+    li x20, 5        # a = 3
+    li x21, 0        # b = 1
 
     add x5, x20, x21  # x5 = g + h
     add x6, x22, x23  # x6 = i + j
