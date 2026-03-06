@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Feb 26 11:15:52 2026
+# Process ID: 11004
+# Current directory: C:/Users/Saqib Rehman/Desktop/CALab/CA_Lab/CA_Lab.runs/impl_1
+# Command line: vivado.exe -log fsm_counter_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source fsm_counter_top.tcl -notrace
+# Log file: C:/Users/Saqib Rehman/Desktop/CALab/CA_Lab/CA_Lab.runs/impl_1/fsm_counter_top.vdi
+# Journal file: C:/Users/Saqib Rehman/Desktop/CALab/CA_Lab/CA_Lab.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source fsm_counter_top.tcl -notrace
