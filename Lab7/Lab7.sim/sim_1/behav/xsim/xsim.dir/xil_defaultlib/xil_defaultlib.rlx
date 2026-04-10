@@ -1,0 +1,11 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/Lab6/sources_1/new/ALU_top.v,1773291002,verilog,,C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/Lab6/sources_1/new/OneBitALU.v,,ALU_top,,,,,,,,
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/Lab6/sources_1/new/OneBitALU.v,1773291002,verilog,,C:/Users/abbas/Lab7/Lab7.srcs/sources_1/new/RegisterFile.v,,ALU_1bit,,,,,,,,
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/Lab6/sources_1/new/fullAdder.v,1773291002,verilog,,C:/Users/abbas/Lab7/Lab7.srcs/sim_1/new/Integrated_FSM_tb.v,,fullAdder,,,,,,,,
+C:/Users/abbas/Lab7/Lab7.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/abbas/Lab7/Lab7.srcs/sim_1/new/Integrated_FSM_tb.v,1773380800,verilog,,,,Integrated_FSM_tb,,,,,,,,
+C:/Users/abbas/Lab7/Lab7.srcs/sim_1/new/RegisterFile_tb.v,1773290703,verilog,,,,RegisterFile_tb,,,,,,,,
+C:/Users/abbas/Lab7/Lab7.srcs/sources_1/new/RegisterFile.v,1773290128,verilog,,C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/Lab6/sources_1/new/fullAdder.v,,RegisterFile,,,,,,,,

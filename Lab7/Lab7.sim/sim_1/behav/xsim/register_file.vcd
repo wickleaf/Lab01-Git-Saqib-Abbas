@@ -1,0 +1,153 @@
+$date
+   Thu Mar 12 09:39:54 2026
+$end
+$version
+  2020.1
+$end
+$timescale
+  1ps
+$end
+$scope module RegisterFile_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # WriteEnable $end
+$var reg 5 $ rs1 [4:0] $end
+$var reg 5 % rs2 [4:0] $end
+$var reg 5 & rd [4:0] $end
+$var reg 32 ' WriteData [31:0] $end
+$var wire 32 ( ReadData1 [31:0] $end
+$var wire 32 ) readData2 [31:0] $end
+$scope module uut $end
+$var wire 1 * clk $end
+$var wire 1 + rst $end
+$var wire 1 , WriteEnable $end
+$var wire 5 - rs1 [4:0] $end
+$var wire 5 . rs2 [4:0] $end
+$var wire 5 / rd [4:0] $end
+$var wire 32 0 WriteData [31:0] $end
+$var wire 32 ( ReadData1 [31:0] $end
+$var wire 32 ) readData2 [31:0] $end
+$var integer 32 1 i $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+b0 $
+b0 %
+b0 &
+b0 '
+b0 (
+b0 )
+0*
+1+
+0,
+b0 -
+b0 .
+b0 /
+b0 0
+bx 1
+$end
+#5000
+1!
+1*
+#10000
+0!
+0"
+1#
+b101 &
+b11011110101011011011111011101111 '
+0*
+0+
+1,
+b101 /
+b11011110101011011011111011101111 0
+#15000
+1!
+1*
+#20000
+0!
+0#
+b101 $
+b11011110101011011011111011101111 (
+0*
+0,
+b101 -
+#25000
+1!
+1#
+b0 &
+b10111010110111001010111111100000 '
+1*
+1,
+b0 /
+b10111010110111001010111111100000 0
+#30000
+0!
+0*
+#35000
+1!
+0#
+b0 %
+1*
+0,
+#40000
+0!
+1#
+b1010 &
+b10010001101000101011001111000 '
+0*
+1,
+b1010 /
+b10010001101000101011001111000 0
+#45000
+1!
+1*
+#50000
+0!
+0#
+b101 $
+b1010 %
+b10010001101000101011001111000 )
+0*
+0,
+b1010 .
+#55000
+1!
+1#
+b101 &
+b1011111011101111 '
+b1011111011101111 (
+1*
+1,
+b101 /
+b1011111011101111 0
+#60000
+0!
+0*
+#65000
+1!
+0#
+b101 $
+1*
+0,
+#70000
+0!
+1"
+0*
+1+
+#75000
+1!
+b0 (
+b0 )
+1*
+#80000
+0!
+0"
+b101 $
+b1010 %
+0*
+0+

@@ -1,0 +1,1461 @@
+$date
+   Thu Mar 12 09:57:32 2026
+$end
+$version
+  2020.1
+$end
+$timescale
+  1ps
+$end
+$scope module Integrated_FSM_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # WriteEnable $end
+$var reg 5 $ rs1 [4:0] $end
+$var reg 5 % rs2 [4:0] $end
+$var reg 5 & rd [4:0] $end
+$var reg 4 ' ALUControl [3:0] $end
+$var reg 32 ( ImmData [31:0] $end
+$var reg 1 ) UseImm $end
+$var wire 32 * WriteData [31:0] $end
+$var wire 32 + ReadData1 [31:0] $end
+$var wire 32 , readData2 [31:0] $end
+$var wire 32 - ALUResult [31:0] $end
+$var wire 1 . Zero $end
+$var reg 3 / state [2:0] $end
+$var parameter 3 0 S_INIT [2:0] $end
+$var parameter 3 1 S_LOAD_X1 [2:0] $end
+$var parameter 3 2 S_LOAD_X2 [2:0] $end
+$var parameter 3 3 S_ADD [2:0] $end
+$var parameter 3 4 S_CHECK [2:0] $end
+$var parameter 3 5 S_DONE [2:0] $end
+$scope module rf $end
+$var wire 1 6 clk $end
+$var wire 1 7 rst $end
+$var wire 1 8 WriteEnable $end
+$var wire 5 9 rs1 [4:0] $end
+$var wire 5 : rs2 [4:0] $end
+$var wire 5 ; rd [4:0] $end
+$var wire 32 * WriteData [31:0] $end
+$var wire 32 + ReadData1 [31:0] $end
+$var wire 32 , readData2 [31:0] $end
+$var integer 32 < i $end
+$upscope $end
+$scope module alu $end
+$var wire 32 + A [31:0] $end
+$var wire 32 , B [31:0] $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 32 > ALUResult [31:0] $end
+$var wire 1 . zero $end
+$var wire 33 ? carry [32:0] $end
+$var wire 32 @ temp_res [31:0] $end
+$scope module alu_slice[0].alu_inst $end
+$var wire 1 A A $end
+$var wire 1 B B $end
+$var wire 1 C cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 D ALUResult $end
+$var wire 1 E cout $end
+$var wire 1 F binvert $end
+$var wire 1 G sumOut $end
+$var wire 1 H sum_out $end
+$scope module addSubtract $end
+$var wire 1 A a $end
+$var wire 1 F b $end
+$var wire 1 C cin $end
+$var wire 1 H sum $end
+$var wire 1 E cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[1].alu_inst $end
+$var wire 1 I A $end
+$var wire 1 J B $end
+$var wire 1 E cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 K ALUResult $end
+$var wire 1 L cout $end
+$var wire 1 M binvert $end
+$var wire 1 N sumOut $end
+$var wire 1 O sum_out $end
+$scope module addSubtract $end
+$var wire 1 I a $end
+$var wire 1 M b $end
+$var wire 1 E cin $end
+$var wire 1 O sum $end
+$var wire 1 L cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[2].alu_inst $end
+$var wire 1 P A $end
+$var wire 1 Q B $end
+$var wire 1 L cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 R ALUResult $end
+$var wire 1 S cout $end
+$var wire 1 T binvert $end
+$var wire 1 U sumOut $end
+$var wire 1 V sum_out $end
+$scope module addSubtract $end
+$var wire 1 P a $end
+$var wire 1 T b $end
+$var wire 1 L cin $end
+$var wire 1 V sum $end
+$var wire 1 S cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[3].alu_inst $end
+$var wire 1 W A $end
+$var wire 1 X B $end
+$var wire 1 S cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 Y ALUResult $end
+$var wire 1 Z cout $end
+$var wire 1 [ binvert $end
+$var wire 1 \ sumOut $end
+$var wire 1 ] sum_out $end
+$scope module addSubtract $end
+$var wire 1 W a $end
+$var wire 1 [ b $end
+$var wire 1 S cin $end
+$var wire 1 ] sum $end
+$var wire 1 Z cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[4].alu_inst $end
+$var wire 1 ^ A $end
+$var wire 1 _ B $end
+$var wire 1 Z cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 ` ALUResult $end
+$var wire 1 a cout $end
+$var wire 1 b binvert $end
+$var wire 1 c sumOut $end
+$var wire 1 d sum_out $end
+$scope module addSubtract $end
+$var wire 1 ^ a $end
+$var wire 1 b b $end
+$var wire 1 Z cin $end
+$var wire 1 d sum $end
+$var wire 1 a cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[5].alu_inst $end
+$var wire 1 e A $end
+$var wire 1 f B $end
+$var wire 1 a cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 g ALUResult $end
+$var wire 1 h cout $end
+$var wire 1 i binvert $end
+$var wire 1 j sumOut $end
+$var wire 1 k sum_out $end
+$scope module addSubtract $end
+$var wire 1 e a $end
+$var wire 1 i b $end
+$var wire 1 a cin $end
+$var wire 1 k sum $end
+$var wire 1 h cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[6].alu_inst $end
+$var wire 1 l A $end
+$var wire 1 m B $end
+$var wire 1 h cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 n ALUResult $end
+$var wire 1 o cout $end
+$var wire 1 p binvert $end
+$var wire 1 q sumOut $end
+$var wire 1 r sum_out $end
+$scope module addSubtract $end
+$var wire 1 l a $end
+$var wire 1 p b $end
+$var wire 1 h cin $end
+$var wire 1 r sum $end
+$var wire 1 o cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[7].alu_inst $end
+$var wire 1 s A $end
+$var wire 1 t B $end
+$var wire 1 o cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 u ALUResult $end
+$var wire 1 v cout $end
+$var wire 1 w binvert $end
+$var wire 1 x sumOut $end
+$var wire 1 y sum_out $end
+$scope module addSubtract $end
+$var wire 1 s a $end
+$var wire 1 w b $end
+$var wire 1 o cin $end
+$var wire 1 y sum $end
+$var wire 1 v cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[8].alu_inst $end
+$var wire 1 z A $end
+$var wire 1 { B $end
+$var wire 1 v cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 | ALUResult $end
+$var wire 1 } cout $end
+$var wire 1 ~ binvert $end
+$var wire 1 !! sumOut $end
+$var wire 1 "! sum_out $end
+$scope module addSubtract $end
+$var wire 1 z a $end
+$var wire 1 ~ b $end
+$var wire 1 v cin $end
+$var wire 1 "! sum $end
+$var wire 1 } cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[9].alu_inst $end
+$var wire 1 #! A $end
+$var wire 1 $! B $end
+$var wire 1 } cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 %! ALUResult $end
+$var wire 1 &! cout $end
+$var wire 1 '! binvert $end
+$var wire 1 (! sumOut $end
+$var wire 1 )! sum_out $end
+$scope module addSubtract $end
+$var wire 1 #! a $end
+$var wire 1 '! b $end
+$var wire 1 } cin $end
+$var wire 1 )! sum $end
+$var wire 1 &! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[10].alu_inst $end
+$var wire 1 *! A $end
+$var wire 1 +! B $end
+$var wire 1 &! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 ,! ALUResult $end
+$var wire 1 -! cout $end
+$var wire 1 .! binvert $end
+$var wire 1 /! sumOut $end
+$var wire 1 0! sum_out $end
+$scope module addSubtract $end
+$var wire 1 *! a $end
+$var wire 1 .! b $end
+$var wire 1 &! cin $end
+$var wire 1 0! sum $end
+$var wire 1 -! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[11].alu_inst $end
+$var wire 1 1! A $end
+$var wire 1 2! B $end
+$var wire 1 -! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 3! ALUResult $end
+$var wire 1 4! cout $end
+$var wire 1 5! binvert $end
+$var wire 1 6! sumOut $end
+$var wire 1 7! sum_out $end
+$scope module addSubtract $end
+$var wire 1 1! a $end
+$var wire 1 5! b $end
+$var wire 1 -! cin $end
+$var wire 1 7! sum $end
+$var wire 1 4! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[12].alu_inst $end
+$var wire 1 8! A $end
+$var wire 1 9! B $end
+$var wire 1 4! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 :! ALUResult $end
+$var wire 1 ;! cout $end
+$var wire 1 <! binvert $end
+$var wire 1 =! sumOut $end
+$var wire 1 >! sum_out $end
+$scope module addSubtract $end
+$var wire 1 8! a $end
+$var wire 1 <! b $end
+$var wire 1 4! cin $end
+$var wire 1 >! sum $end
+$var wire 1 ;! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[13].alu_inst $end
+$var wire 1 ?! A $end
+$var wire 1 @! B $end
+$var wire 1 ;! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 A! ALUResult $end
+$var wire 1 B! cout $end
+$var wire 1 C! binvert $end
+$var wire 1 D! sumOut $end
+$var wire 1 E! sum_out $end
+$scope module addSubtract $end
+$var wire 1 ?! a $end
+$var wire 1 C! b $end
+$var wire 1 ;! cin $end
+$var wire 1 E! sum $end
+$var wire 1 B! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[14].alu_inst $end
+$var wire 1 F! A $end
+$var wire 1 G! B $end
+$var wire 1 B! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 H! ALUResult $end
+$var wire 1 I! cout $end
+$var wire 1 J! binvert $end
+$var wire 1 K! sumOut $end
+$var wire 1 L! sum_out $end
+$scope module addSubtract $end
+$var wire 1 F! a $end
+$var wire 1 J! b $end
+$var wire 1 B! cin $end
+$var wire 1 L! sum $end
+$var wire 1 I! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[15].alu_inst $end
+$var wire 1 M! A $end
+$var wire 1 N! B $end
+$var wire 1 I! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 O! ALUResult $end
+$var wire 1 P! cout $end
+$var wire 1 Q! binvert $end
+$var wire 1 R! sumOut $end
+$var wire 1 S! sum_out $end
+$scope module addSubtract $end
+$var wire 1 M! a $end
+$var wire 1 Q! b $end
+$var wire 1 I! cin $end
+$var wire 1 S! sum $end
+$var wire 1 P! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[16].alu_inst $end
+$var wire 1 T! A $end
+$var wire 1 U! B $end
+$var wire 1 P! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 V! ALUResult $end
+$var wire 1 W! cout $end
+$var wire 1 X! binvert $end
+$var wire 1 Y! sumOut $end
+$var wire 1 Z! sum_out $end
+$scope module addSubtract $end
+$var wire 1 T! a $end
+$var wire 1 X! b $end
+$var wire 1 P! cin $end
+$var wire 1 Z! sum $end
+$var wire 1 W! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[17].alu_inst $end
+$var wire 1 [! A $end
+$var wire 1 \! B $end
+$var wire 1 W! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 ]! ALUResult $end
+$var wire 1 ^! cout $end
+$var wire 1 _! binvert $end
+$var wire 1 `! sumOut $end
+$var wire 1 a! sum_out $end
+$scope module addSubtract $end
+$var wire 1 [! a $end
+$var wire 1 _! b $end
+$var wire 1 W! cin $end
+$var wire 1 a! sum $end
+$var wire 1 ^! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[18].alu_inst $end
+$var wire 1 b! A $end
+$var wire 1 c! B $end
+$var wire 1 ^! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 d! ALUResult $end
+$var wire 1 e! cout $end
+$var wire 1 f! binvert $end
+$var wire 1 g! sumOut $end
+$var wire 1 h! sum_out $end
+$scope module addSubtract $end
+$var wire 1 b! a $end
+$var wire 1 f! b $end
+$var wire 1 ^! cin $end
+$var wire 1 h! sum $end
+$var wire 1 e! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[19].alu_inst $end
+$var wire 1 i! A $end
+$var wire 1 j! B $end
+$var wire 1 e! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 k! ALUResult $end
+$var wire 1 l! cout $end
+$var wire 1 m! binvert $end
+$var wire 1 n! sumOut $end
+$var wire 1 o! sum_out $end
+$scope module addSubtract $end
+$var wire 1 i! a $end
+$var wire 1 m! b $end
+$var wire 1 e! cin $end
+$var wire 1 o! sum $end
+$var wire 1 l! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[20].alu_inst $end
+$var wire 1 p! A $end
+$var wire 1 q! B $end
+$var wire 1 l! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 r! ALUResult $end
+$var wire 1 s! cout $end
+$var wire 1 t! binvert $end
+$var wire 1 u! sumOut $end
+$var wire 1 v! sum_out $end
+$scope module addSubtract $end
+$var wire 1 p! a $end
+$var wire 1 t! b $end
+$var wire 1 l! cin $end
+$var wire 1 v! sum $end
+$var wire 1 s! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[21].alu_inst $end
+$var wire 1 w! A $end
+$var wire 1 x! B $end
+$var wire 1 s! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 y! ALUResult $end
+$var wire 1 z! cout $end
+$var wire 1 {! binvert $end
+$var wire 1 |! sumOut $end
+$var wire 1 }! sum_out $end
+$scope module addSubtract $end
+$var wire 1 w! a $end
+$var wire 1 {! b $end
+$var wire 1 s! cin $end
+$var wire 1 }! sum $end
+$var wire 1 z! cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[22].alu_inst $end
+$var wire 1 ~! A $end
+$var wire 1 !" B $end
+$var wire 1 z! cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 "" ALUResult $end
+$var wire 1 #" cout $end
+$var wire 1 $" binvert $end
+$var wire 1 %" sumOut $end
+$var wire 1 &" sum_out $end
+$scope module addSubtract $end
+$var wire 1 ~! a $end
+$var wire 1 $" b $end
+$var wire 1 z! cin $end
+$var wire 1 &" sum $end
+$var wire 1 #" cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[23].alu_inst $end
+$var wire 1 '" A $end
+$var wire 1 (" B $end
+$var wire 1 #" cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 )" ALUResult $end
+$var wire 1 *" cout $end
+$var wire 1 +" binvert $end
+$var wire 1 ," sumOut $end
+$var wire 1 -" sum_out $end
+$scope module addSubtract $end
+$var wire 1 '" a $end
+$var wire 1 +" b $end
+$var wire 1 #" cin $end
+$var wire 1 -" sum $end
+$var wire 1 *" cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[24].alu_inst $end
+$var wire 1 ." A $end
+$var wire 1 /" B $end
+$var wire 1 *" cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 0" ALUResult $end
+$var wire 1 1" cout $end
+$var wire 1 2" binvert $end
+$var wire 1 3" sumOut $end
+$var wire 1 4" sum_out $end
+$scope module addSubtract $end
+$var wire 1 ." a $end
+$var wire 1 2" b $end
+$var wire 1 *" cin $end
+$var wire 1 4" sum $end
+$var wire 1 1" cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[25].alu_inst $end
+$var wire 1 5" A $end
+$var wire 1 6" B $end
+$var wire 1 1" cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 7" ALUResult $end
+$var wire 1 8" cout $end
+$var wire 1 9" binvert $end
+$var wire 1 :" sumOut $end
+$var wire 1 ;" sum_out $end
+$scope module addSubtract $end
+$var wire 1 5" a $end
+$var wire 1 9" b $end
+$var wire 1 1" cin $end
+$var wire 1 ;" sum $end
+$var wire 1 8" cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[26].alu_inst $end
+$var wire 1 <" A $end
+$var wire 1 =" B $end
+$var wire 1 8" cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 >" ALUResult $end
+$var wire 1 ?" cout $end
+$var wire 1 @" binvert $end
+$var wire 1 A" sumOut $end
+$var wire 1 B" sum_out $end
+$scope module addSubtract $end
+$var wire 1 <" a $end
+$var wire 1 @" b $end
+$var wire 1 8" cin $end
+$var wire 1 B" sum $end
+$var wire 1 ?" cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[27].alu_inst $end
+$var wire 1 C" A $end
+$var wire 1 D" B $end
+$var wire 1 ?" cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 E" ALUResult $end
+$var wire 1 F" cout $end
+$var wire 1 G" binvert $end
+$var wire 1 H" sumOut $end
+$var wire 1 I" sum_out $end
+$scope module addSubtract $end
+$var wire 1 C" a $end
+$var wire 1 G" b $end
+$var wire 1 ?" cin $end
+$var wire 1 I" sum $end
+$var wire 1 F" cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[28].alu_inst $end
+$var wire 1 J" A $end
+$var wire 1 K" B $end
+$var wire 1 F" cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 L" ALUResult $end
+$var wire 1 M" cout $end
+$var wire 1 N" binvert $end
+$var wire 1 O" sumOut $end
+$var wire 1 P" sum_out $end
+$scope module addSubtract $end
+$var wire 1 J" a $end
+$var wire 1 N" b $end
+$var wire 1 F" cin $end
+$var wire 1 P" sum $end
+$var wire 1 M" cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[29].alu_inst $end
+$var wire 1 Q" A $end
+$var wire 1 R" B $end
+$var wire 1 M" cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 S" ALUResult $end
+$var wire 1 T" cout $end
+$var wire 1 U" binvert $end
+$var wire 1 V" sumOut $end
+$var wire 1 W" sum_out $end
+$scope module addSubtract $end
+$var wire 1 Q" a $end
+$var wire 1 U" b $end
+$var wire 1 M" cin $end
+$var wire 1 W" sum $end
+$var wire 1 T" cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[30].alu_inst $end
+$var wire 1 X" A $end
+$var wire 1 Y" B $end
+$var wire 1 T" cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 Z" ALUResult $end
+$var wire 1 [" cout $end
+$var wire 1 \" binvert $end
+$var wire 1 ]" sumOut $end
+$var wire 1 ^" sum_out $end
+$scope module addSubtract $end
+$var wire 1 X" a $end
+$var wire 1 \" b $end
+$var wire 1 T" cin $end
+$var wire 1 ^" sum $end
+$var wire 1 [" cout $end
+$upscope $end
+$upscope $end
+$scope module alu_slice[31].alu_inst $end
+$var wire 1 _" A $end
+$var wire 1 `" B $end
+$var wire 1 [" cin $end
+$var wire 4 = ALUControl [3:0] $end
+$var reg 1 a" ALUResult $end
+$var wire 1 b" cout $end
+$var wire 1 c" binvert $end
+$var wire 1 d" sumOut $end
+$var wire 1 e" sum_out $end
+$scope module addSubtract $end
+$var wire 1 _" a $end
+$var wire 1 c" b $end
+$var wire 1 [" cin $end
+$var wire 1 e" sum $end
+$var wire 1 b" cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+z!!
+0!"
+1"
+0"!
+0""
+0#
+0#!
+0#"
+b0 $
+0$!
+0$"
+b0 %
+0%!
+z%"
+b0 &
+0&!
+0&"
+b0 '
+0'!
+0'"
+b0 (
+z(!
+0("
+1)
+0)!
+0)"
+b0 *
+0*!
+0*"
+b0 +
+0+!
+0+"
+b0 ,
+0,!
+z,"
+b0 -
+0-!
+0-"
+1.
+0.!
+0."
+b0 /
+z/!
+0/"
+b0 0
+00!
+00"
+b1 1
+01!
+01"
+b10 2
+02!
+02"
+b11 3
+03!
+z3"
+b100 4
+04!
+04"
+b101 5
+05!
+05"
+06
+z6!
+06"
+17
+07!
+07"
+08
+08!
+08"
+b0 9
+09!
+09"
+b0 :
+0:!
+z:"
+b0 ;
+0;!
+0;"
+bx <
+0<!
+0<"
+b0 =
+z=!
+0="
+b0 >
+0>!
+0>"
+b0 ?
+0?!
+0?"
+b0 @
+0@!
+0@"
+0A
+0A!
+zA"
+0B
+0B!
+0B"
+0C
+0C!
+0C"
+0D
+zD!
+0D"
+0E
+0E!
+0E"
+0F
+0F!
+0F"
+zG
+0G!
+0G"
+0H
+0H!
+zH"
+0I
+0I!
+0I"
+0J
+0J!
+0J"
+0K
+zK!
+0K"
+0L
+0L!
+0L"
+0M
+0M!
+0M"
+zN
+0N!
+0N"
+0O
+0O!
+zO"
+0P
+0P!
+0P"
+0Q
+0Q!
+0Q"
+0R
+zR!
+0R"
+0S
+0S!
+0S"
+0T
+0T!
+0T"
+zU
+0U!
+0U"
+0V
+0V!
+zV"
+0W
+0W!
+0W"
+0X
+0X!
+0X"
+0Y
+zY!
+0Y"
+0Z
+0Z!
+0Z"
+0[
+0[!
+0["
+z\
+0\!
+0\"
+0]
+0]!
+z]"
+0^
+0^!
+0^"
+0_
+0_!
+0_"
+0`
+z`!
+0`"
+0a
+0a!
+0a"
+0b
+0b!
+0b"
+zc
+0c!
+0c"
+0d
+0d!
+zd"
+0e
+0e!
+0e"
+0f
+0f!
+0g
+zg!
+0h
+0h!
+0i
+0i!
+zj
+0j!
+0k
+0k!
+0l
+0l!
+0m
+0m!
+0n
+zn!
+0o
+0o!
+0p
+0p!
+zq
+0q!
+0r
+0r!
+0s
+0s!
+0t
+0t!
+0u
+zu!
+0v
+0v!
+0w
+0w!
+zx
+0x!
+0y
+0y!
+0z
+0z!
+0{
+0{!
+0|
+z|!
+0}
+0}!
+0~
+0~!
+$end
+#5000
+1!
+0!"
+0#!
+0$!
+0'"
+0("
+0*!
+b0 +
+0+!
+b0 ,
+0."
+0/"
+01!
+02!
+05"
+16
+06"
+08!
+09!
+0<"
+0="
+0?!
+0@!
+0A
+0B
+0C"
+0D"
+0F!
+0G!
+0I
+0J
+0J"
+0K"
+0M!
+0N!
+0P
+0Q
+0Q"
+0R"
+0T!
+0U!
+0W
+0X
+0X"
+0Y"
+0[!
+0\!
+0^
+0_
+0_"
+0`"
+0b!
+0c!
+0e
+0f
+0i!
+0j!
+0l
+0m
+0p!
+0q!
+0s
+0t
+0w!
+0x!
+0z
+0{
+0~!
+#10000
+0!
+0"
+06
+07
+#15000
+1!
+b1 /
+16
+#20000
+0!
+06
+#25000
+1!
+1#
+b1 &
+b1111 (
+1)
+b1111 *
+b10 /
+16
+18
+b1 ;
+#30000
+0!
+06
+#35000
+1!
+0!"
+1#
+0#!
+0$!
+b10 &
+0'"
+b11001 (
+0("
+1)
+b11001 *
+0*!
+b0 +
+0+!
+b0 ,
+0."
+b11 /
+0/"
+01!
+02!
+05"
+16
+06"
+08!
+09!
+b10 ;
+0<"
+0="
+0?!
+0@!
+0A
+0B
+0C"
+0D"
+0F!
+0G!
+0I
+0J
+0J"
+0K"
+0M!
+0N!
+0P
+0Q
+0Q"
+0R"
+0T!
+0U!
+0W
+0X
+0X"
+0Y"
+0[!
+0\!
+0^
+0_
+0_"
+0`"
+0b!
+0c!
+0e
+0f
+0i!
+0j!
+0l
+0m
+0p!
+0q!
+0s
+0t
+0w!
+0x!
+0z
+0{
+0~!
+#40000
+0!
+06
+#45000
+1!
+0!"
+1"!
+1""
+1#
+0#!
+0#"
+b1 $
+0$!
+1$"
+b10 %
+1%!
+b11 &
+0&!
+1&"
+b10 '
+1'!
+0'"
+0("
+0)
+1)!
+1)"
+b11111111111111111111111111110110 *
+0*!
+0*"
+b1111 +
+0+!
+1+"
+b11001 ,
+1,!
+b11111111111111111111111111110110 -
+0-!
+1-"
+0.
+1.!
+0."
+b100 /
+0/"
+10!
+10"
+01!
+01"
+02!
+12"
+13!
+04!
+14"
+15!
+05"
+16
+06"
+17!
+17"
+08!
+08"
+b1 9
+09!
+19"
+b10 :
+1:!
+b11 ;
+0;!
+1;"
+1<!
+0<"
+b10 =
+0="
+b11111111111111111111111111110110 >
+1>!
+1>"
+b11111 ?
+0?!
+0?"
+b11111111111111111111111111110110 @
+0@!
+1@"
+1A
+1A!
+1B
+0B!
+1B"
+1C
+1C!
+0C"
+0D
+0D"
+1E
+1E!
+1E"
+0F
+0F!
+0F"
+0G!
+1G"
+0H
+1H!
+1I
+0I!
+1I"
+0J
+1J!
+0J"
+1K
+0K"
+1L
+1L!
+1L"
+1M
+0M!
+0M"
+0N!
+1N"
+1O
+1O!
+1P
+0P!
+1P"
+0Q
+1Q!
+0Q"
+1R
+0R"
+1S
+1S!
+1S"
+1T
+0T!
+0T"
+0U!
+1U"
+1V
+1V!
+1W
+0W!
+1W"
+1X
+1X!
+0X"
+0Y
+0Y"
+1Z
+1Z!
+1Z"
+0[
+0[!
+0["
+0\!
+1\"
+0]
+1]!
+0^
+0^!
+1^"
+1_
+1_!
+0_"
+1`
+0`"
+0a
+1a!
+1a"
+0b
+0b!
+0b"
+0c!
+1c"
+1d
+1d!
+0e
+0e!
+1e"
+0f
+1f!
+1g
+0h
+1h!
+1i
+0i!
+0j!
+1k
+1k!
+0l
+0l!
+0m
+1m!
+1n
+0o
+1o!
+1p
+0p!
+0q!
+1r
+1r!
+0s
+0s!
+0t
+1t!
+1u
+0v
+1v!
+1w
+0w!
+0x!
+1y
+1y!
+0z
+0z!
+0{
+1{!
+1|
+0}
+1}!
+1~
+0~!
+#50000
+0!
+06
+#55000
+1!
+0!"
+1"!
+1""
+0#
+1#!
+1#"
+b11 $
+0$!
+1%!
+1&!
+1&"
+1'"
+0("
+1)!
+1)"
+b11111111111111111111111111011101 *
+1*!
+1*"
+b11111111111111111111111111110110 +
+0+!
+b11001 ,
+1,!
+b11111111111111111111111111011101 -
+1-!
+1-"
+1."
+0/"
+10!
+10"
+11!
+11"
+02!
+13!
+14!
+14"
+15"
+16
+06"
+17!
+17"
+08
+18!
+18"
+b11 9
+09!
+1:!
+1;!
+1;"
+1<"
+0="
+b11111111111111111111111111011101 >
+1>!
+1>"
+b111111111111111111111111111001101 ?
+1?!
+1?"
+b11111111111111111111111111011101 @
+0@!
+0A
+1A!
+1B
+1B!
+1B"
+1C"
+1D
+0D"
+0E
+1E!
+1E"
+1F!
+1F"
+0G!
+1H
+1H!
+1I
+1I!
+1I"
+0J
+1J"
+0K
+0K"
+1L
+1L!
+1L"
+1M!
+1M"
+0N!
+0O
+1O!
+1P
+1P!
+1P"
+0Q
+1Q"
+0R"
+1S!
+1S"
+1T!
+1T"
+0U!
+1V!
+0W
+1W!
+1W"
+1X
+1X"
+1Y
+0Y"
+0Z
+1Z!
+1Z"
+1[!
+1["
+0\!
+1]
+1]!
+1^
+1^!
+1^"
+1_
+1_"
+1`
+0`"
+0a
+1a!
+1a"
+1b!
+1b"
+0c!
+1d
+1d!
+1e
+1e!
+1e"
+0f
+0g
+1h
+1h!
+1i!
+0j!
+0k
+1k!
+1l
+1l!
+0m
+1n
+1o
+1o!
+1p!
+0q!
+1r
+1r!
+1s
+1s!
+0t
+1u
+1v
+1v!
+1w!
+0x!
+1y
+1y!
+1z
+1z!
+0{
+1|
+1}
+1}!
+1~!
+#56000
+b101 /
+#60000
+0!
+06
+#65000
+1!
+16

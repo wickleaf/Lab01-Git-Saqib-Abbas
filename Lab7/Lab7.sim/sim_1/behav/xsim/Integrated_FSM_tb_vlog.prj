@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../Desktop/CA/CALab-Git-Saqib-Abbas/Lab6/sources_1/new/ALU_top.v" \
+"../../../../../Desktop/CA/CALab-Git-Saqib-Abbas/Lab6/sources_1/new/OneBitALU.v" \
+"../../../../Lab7.srcs/sources_1/new/RegisterFile.v" \
+"../../../../../Desktop/CA/CALab-Git-Saqib-Abbas/Lab6/sources_1/new/fullAdder.v" \
+"../../../../Lab7.srcs/sim_1/new/Integrated_FSM_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
