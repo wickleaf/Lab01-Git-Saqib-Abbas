@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"PC_Infrastructure_tb_time_synth.v" \
+"../../../../../lab11.srcs/sources_1/new/ProgramCounter.v" \
+"../../../../../lab11.srcs/sources_1/new/branch_adder.v" \
+"../../../../../lab11.srcs/sources_1/new/immGen.v" \
+"../../../../../lab11.srcs/sources_1/new/mmux2.v" \
+"../../../../../lab11.srcs/sources_1/new/pcAdder.v" \
+"../../../../../lab11.srcs/sim_1/new/PC_Infrastructure_tb.v" \
+
+# Do not sort compile order
+nosort

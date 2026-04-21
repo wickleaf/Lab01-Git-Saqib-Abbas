@@ -1,0 +1,11 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sim_1/new/PC_Infrastructure_tb.v,1776664488,verilog,,,,PC_Infrastructure_tb,,,,,,,,
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sources_1/new/ProgramCounter.v,1776669955,verilog,,C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sources_1/new/branch_adder.v,,ProgramCounter,,,,,,,,
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sources_1/new/branch_adder.v,1776664292,verilog,,C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sources_1/new/immGen.v,,branch_adder,,,,,,,,
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sources_1/new/immGen.v,1776664360,verilog,,C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sources_1/new/mmux2.v,,immGen,,,,,,,,
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sources_1/new/mmux2.v,1776664330,verilog,,C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sources_1/new/pcAdder.v,,mmux2,,,,,,,,
+C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sources_1/new/pcAdder.v,1776664253,verilog,,C:/Users/abbas/Desktop/CA/CALab-Git-Saqib-Abbas/lab11/lab11.srcs/sim_1/new/PC_Infrastructure_tb.v,,pcAdder,,,,,,,,
