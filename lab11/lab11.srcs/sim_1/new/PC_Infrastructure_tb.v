@@ -12,34 +12,29 @@ immGen u_immGen (.instruction(instruction), .imm(imm));
 branch_adder u_brAdd (.PC(PC), .imm(imm), .BranchTarget(BranchTarget));
 mmux2 u_pcmux (.in0(PCPlus4), .in1(BranchTarget), .sel(PCSrc), .out(PCNext));
 
-// Clock Generation
 always #5 clk = ~clk;
 
 initial begin
-    // Initialize
+
     clk = 0;
     rst = 1;
     PCSrc = 0;
     instruction = 32'd0;
     #10;
-    rst = 0; // Release reset, PC should be 0
+    rst = 0; 
     
-    // TEST 1: Sequential PC+4 updates
-    #10; // PC becomes 4
-    #10; // PC becomes 8
+    #10;
+    #10;
     
-    // TEST 2: I-Type Immediate Generation (ADDI x5, x5, -1) -> 0xfff28293
     instruction = 32'hfff28293;
-    #10; // PC becomes 12. imm should be 0xFFFFFFFF (-1)
+    #10;
     
-    // TEST 3: Branch Target Update (BEQ - Branch backward by -4 bytes)
-    // BEQ instruction generating an unshifted -2 offset.
-    // immGen should output 0xFFFFFFFE (-2). branch_adder shifts to -4.
+    
     instruction = 32'hfe000ce3;
-    PCSrc = 1; // Trigger the branch
-    #10; // PC should update to (12-4)=8
+    PCSrc = 1; 
+    #10;
     PCSrc = 0;
-    #10; // PC becomes 12 again
+    #10;
     
     $finish;
 end

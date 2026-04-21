@@ -19,7 +19,7 @@ module RegisterFile (
     assign ReadData1 = (rs1 == 5'd0) ? 32'b0 : regs[rs1];
     assign readData2 = (rs2 == 5'd0) ? 32'b0 : regs[rs2];
 
-    always @(posedge clk) begin
+    always @(posedge clk or posedge rst) begin
         if (rst) begin
             for (i = 0; i < 32; i = i + 1) begin
                 regs[i] <= 32'b0;
@@ -28,6 +28,8 @@ module RegisterFile (
         else if (WriteEnable && (rd != 5'd0)) begin
             regs[rd] <= WriteData;
         end
+        else
+            regs[rd] <= regs[rd];
     end
 
 endmodule

@@ -12,7 +12,7 @@ module ALU_1bit(
     wire binvert;
     wire sum_out;
     
-    assign binvert = (ALUControl == 4'b0010) ? ~B : B;
+    assign binvert = (ALUControl == 4'b0110 || ALUControl == 4'b0111) ? ~B : B;
 
     fullAdder addSubtract(
         .a(A),
@@ -24,10 +24,10 @@ module ALU_1bit(
 
     always@(*) begin
         case(ALUControl)
-            4'b0001: ALUResult = sum_out;
+            4'b0000: ALUResult = A & B;
+            4'b0001: ALUResult = A | B;
             4'b0010: ALUResult = sum_out;
-            4'b0011: ALUResult = A & B;
-            4'b0100: ALUResult = A | B;
+            4'b0110: ALUResult = sum_out;
             4'b0101: ALUResult = A ^ B;
             default: ALUResult = 1'b0;
         endcase

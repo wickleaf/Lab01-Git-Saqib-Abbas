@@ -34,6 +34,12 @@ module alu_control (
                         else
                             ALUControl = 4'b0010;
                     end
+                    F3_SLL: begin
+                        ALUControl = 4'b1000;
+                    end
+                    F3_SRL_SRA: begin
+                        ALUControl = 4'b1001;
+                    end
                     F3_AND: begin
                         ALUControl = 4'b0000;
                     end

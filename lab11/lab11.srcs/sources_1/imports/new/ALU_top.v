@@ -11,7 +11,7 @@ module ALU_top (
     wire [32:0] carry;
     wire [31:0] temp_res;
     
-    assign carry[0] = (ALUControl == 4'b0010) ? 1'b1 : 1'b0;
+    assign carry[0] = (ALUControl == 4'b0110 || ALUControl == 4'b0111) ? 1'b1 : 1'b0;
 
     genvar i;
 
@@ -30,8 +30,9 @@ module ALU_top (
 
     always@(*) begin
         case(ALUControl)
-            4'b0110: ALUResult = A << B[4:0];
-            4'b0111: ALUResult = A >> B[4:0]; 
+            4'b0111: ALUResult = {31'd0, temp_res[31]};
+            4'b1000: ALUResult = A << B[4:0];
+            4'b1001: ALUResult = A >> B[4:0];
             default: ALUResult = temp_res;
         endcase
     end   

@@ -75,7 +75,7 @@ immGen u_immGen (
 alu_control u_ALUControl (
     .ALUOp(ALUOp),
     .funct3(instruction[14:12]),
-    .funct7(instruction[30]),
+    .funct7(instruction[31:25]),
     .ALUControl(ALU_Ctrl_Signal)
 );
 
