@@ -1,0 +1,38 @@
+// countdown.mem
+// Countdown timer program with switch polling and reset detection
+
+@00
+1F000113 // [0]  addi sp, zero, 0x1F0      | sp = 496
+20000493 // [1]  addi s1, zero, 512        | s1 = display output addr
+30000913 // [2]  addi s2, zero, 768        | s2 = switch input addr
+30400993 // [3]  addi s3, zero, 772        | s3 = reset button addr
+0004A023 // [4]  sw   zero, 0(s1)          | clear display
+00092503 // [5]  lw   a0, 0(s2)            | read switch value
+FE050EE3 // [6]  beq  a0, zero, -4         | if zero -> POLL
+008000EF // [7]  jal  ra, +8               | call COUNTDOWN_SUB
+FF1FF06F // [8]  jal  zero, -16            | j INPUT_WAITING
+FF810113 // [9]  addi sp, sp, -8           | push stack frame
+00112223 // [10] sw   ra, 4(sp)            | save return address
+00812023 // [11] sw   s0, 0(sp)            | save s0
+00050413 // [12] addi s0, a0, 0            | s0 = counter = switch value
+02040263 // [13] beq  s0, zero, +36        | if counter==0 -> DONE
+0009A283 // [14] lw   t0, 0(s3)            | read reset button
+00029A63 // [15] bne  t0, zero, +20        | if pressed -> RESET
+0084A023 // [16] sw   s0, 0(s1)            | write counter to display
+030000EF // [17] jal  ra, +48              | call DELAY
+FFF40413 // [18] addi s0, s0, -1           | counter--
+FE9FF06F // [19] jal  zero, -24            | j COUNTDOWN_LOOP
+0004A023 // [20] sw   zero, 0(s1)          | clear display
+0040006F // [21] jal  zero, +4             | j COUNTDOWN_DONE
+0004A023 // [22] sw   zero, 0(s1)          | clear display
+00092283 // [23] lw   t0, 0(s2)            | read switches
+FE029EE3 // [24] bne  t0, zero, -4         | loop -> wait for switch release
+00412083 // [25] lw   ra, 4(sp)            | restore return address
+00012403 // [26] lw   s0, 0(sp)            | restore s0
+00810113 // [27] addi sp, sp, 8            | pop stack frame
+00008067 // [28] jalr zero, ra, 0          | ret
+7D000313 // [29] addi t1, zero, 2000       | outer loop count
+7D000393 // [30] addi t2, zero, 2000       | inner loop count
+FFF38393 // [31] addi t2, t2, -1           | t2--
+FE039EE3 // [32] bne  t2, zero, -4         | loop -> DELAY_INNER
+FFF30313 //
